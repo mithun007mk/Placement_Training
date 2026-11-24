@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('Hello')
+        console.log('JavaScript');
+
+        var age = 19;//declaration and initialization
+        age = 30;// re initialization
+        var age = 40;//re declaration
+        console.log("Age:",age);
+
+        let name = "mithun";
+        name = "MithunKrishna";
+        //re declaration not possible in let 
+        console.log("Name:",name );
+
+        const pi = 3.14;
+        //re initialaization and re declaration is not possible in const 
+        console.log("Pi:",pi);
+
+        function employee(name, company, college = "Sri Eshwar College of Engineering") {
+    console.log("Name: " + name);
+    console.log("Company: " + company);
+    console.log("College: " + college);
+    console.log("-------------------------");
+}
+
+employee("Mithun", "Google");
+employee("Arun", "TCS");
+employee("Priya", "Infosys");
+
+let data1 = function(){
+    return "Hello JavaScript";
+}
+console.log(data1());
+
+let mult =(a,b)=>{
+    return a * b;
+}
+console.log(mult(2,4));
+
+function sece(callback){
+    console.log("Welcome SECE");
+    callback();
+}
+
+let whatsapp = () => {
+    console.log("shantha says bye");
+}
+
+let notification = () => {
+    console.log("you have a new message ");
+}
+
+whatsapp(notification());
+
+let order_status = new Promise((resolve,reject)=>{
+    let api = true;
+    if(api){
+        resolve("Order Recieved")
+    }else{
+        setTimeout(()=>{
+            reject("Order Failed");
+        }, 2000);
+    }
+})
+order_status.then(data => console.log(data));
+
+    </script>
+    
+</body>
+</html>
